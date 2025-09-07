@@ -10,7 +10,48 @@
 ## 👥 Deskripsi Program
 **Manajemen Pets Daycare**
 
-afaofnafnfoaiwnfoiawnfif
+Program ini adalah aplikasi manajemen penitipan hewan (Pets Daycare) yang dikembangkan dengan bahasa pemrograman Java. Berikut ini adalah komponen utamanya:
+
+**1. Fitur Utama**
+
+- CRUD: Program mampu melakukan operasi Create, Read, Update, dan Delete data peliharaan yang dititipkan
+- Manajemen Data Pets: Mengelola informasi lengkap tentang hewan yang dititipkan termasuk nama, jenis, umur, dan pemilik
+
+**2. Struktur Data**
+
+- ArrayList: Digunakan untuk menyimpan data hewan dalam bentuk array of String, di mana setiap array merepresentasikan data satu hewan
+- String Arrays: Setiap hewan disimpan sebagai array dengan format [ID, Nama, Jenis, Umur, Pemilik]
+
+**3. Validasi Input**
+
+- hanyaHurufDanSpasi(): Memvalidasi bahwa input hanya mengandung huruf dan spasi (untuk nama, jenis, dan nama pemilik)
+- hanyaAngka(): Memvalidasi bahwa input hanya mengandung angka (untuk field umur)
+- Batas Panjang Input: Membatasi panjang input untuk setiap field (nama max 30 karakter, jenis max 20 karakter, dll)
+- Rentang Nilai: Memastikan umur hewan berada dalam rentang yang wajar (0-30 tahun)
+
+**4. Fitur Khusus**
+
+- ID Otomatis: Setiap hewan yang ditambahkan mendapatkan ID secara otomatis yang increment
+- Pesan Error Deskriptif: Memberikan pesan error yang jelas ketika input tidak valid
+- Tampilan Data Terformat: Menampilkan data dalam bentuk tabel yang mudah dibaca
+- Pesan Personalisasi: Menyertakan nama admin (Aris) dalam sambutan program
+
+**5. Alur Program**
+
+- Program menampilkan menu utama dengan opsi-opsi CRUD
+- Pengguna dapat memilih opsi untuk menambah, melihat, mengupdate, atau menghapus data hewan
+- Setiap opsi akan memandu pengguna melalui proses input dengan validasi
+- Program akan terus berjalan sampai pengguna memilih opsi keluar
+
+**6. Keamanan Data**
+
+- Program mencegah input yang tidak valid melalui berbagai lapisan validasi
+- Menghindari error dengan penanganan exception untuk konversi tipe data
+- Memastikan konsistensi data dengan batasan-batasan yang jelas
+
+**7. Kesimpulan**
+
+Program ini memberikan solusi sederhana namun efektif untuk mengelola data penitipan hewan harian. Dengan antarmuka yang user-friendly dan validasi input yang robust, program ini memudahkan admin untuk mengelola data hewan tanpa khawatir terjadi kesalahan input. Program ini cocok digunakan untuk bisnis pets daycare skala kecil hingga menengah.
 
 ## 📖 Source Code
 
