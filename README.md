@@ -1,10 +1,10 @@
 <a name="top"></a>
     
-# PBO | Post-Test 1 Breakdown  
+# PBO | Post-Test 1 | Manajemen Pets Daycare Breakdown
 
 ## 📚 Daftar Isi
 - [👥 Deskripsi Program](#-deskripsi-program)
-- [📖 Source Code](#-source-code)
+- [📖 Penjelasan Kode](#-penjelasan-kode)
 - [🖥️ Penjelasan Alur Program](#️-penjelasan-alur-program)
 
 ## 👥 Deskripsi Program
@@ -29,34 +29,27 @@ Program ini adalah aplikasi manajemen penitipan hewan (Pets Daycare) yang dikemb
 - Batas Panjang Input: Membatasi panjang input untuk setiap field (nama max 30 karakter, jenis max 20 karakter, dll)
 - Rentang Nilai: Memastikan umur hewan berada dalam rentang yang wajar (0-30 tahun)
 
-**4. Fitur Khusus**
-
-- ID Otomatis: Setiap hewan yang ditambahkan mendapatkan ID secara otomatis yang increment
-- Pesan Error Deskriptif: Memberikan pesan error yang jelas ketika input tidak valid
-- Tampilan Data Terformat: Menampilkan data dalam bentuk tabel yang mudah dibaca
-- Pesan Personalisasi: Menyertakan nama admin (Aris) dalam sambutan program
-
-**5. Alur Program**
+**4. Alur Program**
 
 - Program menampilkan menu utama dengan opsi-opsi CRUD
 - Pengguna dapat memilih opsi untuk menambah, melihat, mengupdate, atau menghapus data hewan
 - Setiap opsi akan memandu pengguna melalui proses input dengan validasi
 - Program akan terus berjalan sampai pengguna memilih opsi keluar
 
-**6. Keamanan Data**
+**5. Keamanan Data**
 
 - Program mencegah input yang tidak valid melalui berbagai lapisan validasi
 - Menghindari error dengan penanganan exception untuk konversi tipe data
 - Memastikan konsistensi data dengan batasan-batasan yang jelas
 
-**7. Kesimpulan**
+**6. Kesimpulan**
 
-Program ini memberikan solusi sederhana namun efektif untuk mengelola data penitipan hewan harian. Dengan antarmuka yang user-friendly dan validasi input yang robust, program ini memudahkan admin untuk mengelola data hewan tanpa khawatir terjadi kesalahan input. Program ini cocok digunakan untuk bisnis pets daycare skala kecil hingga menengah.
+Program ini memberikan solusi sederhana namun efektif untuk mengelola data penitipan hewan harian.
 
-## 📖 Source Code
+## 📖 Penjelasan Kode
 
 <details>
-  <summary>Lihat disini</summary>
+  <summary><h3>Lihat disini</h3></summary>
 
   
 ```java
@@ -384,10 +377,120 @@ public class Main {
 <summary><h3>Menu Utama</h3></summary>
 
 <div align="center">
-  <img src="" alt="" width="500px">
+  <img src="https://github.com/user-attachments/assets/160529b6-3faa-4619-a260-b163aa4f6c1e" alt="" width="500px">
 </div>
 
-<p align="justify"></p>
+<p align="justify">Gambar di atas merupakan tampilan menu utama program ketika pertama dijalankan.</p>
+
+**1. Jika input tidak valid**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f3498574-ac7e-4051-9a81-2c6808623bb8" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna menginput di luar daripada opsi (0-4) di menu utama, maka akan ada dialog teks seperti pada gambar di atas. Menu akan diulang, pengguna diminta untuk menginput lagi.</p>
+
+**2. Jika opsi 0(Keluar) dipilih**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/17ec4145-6c43-4fd0-a33c-2ef6d7d46657" alt="" width="500px">
+</div>
+
+<p align="justify">Program akan berhenti berjalan jika pengguna menginput opsi untuk keluar (0). Menu akan berhenti berulang, program selesai.</p>
+
+</details>
+
+<details>
+<summary><h3>Menambah Data Pet</h3></summary>
+
+**1. Validasi input dan jika berupa selain huruf dan spasi**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b80c4e30-3f77-4224-8042-927d36d062fb" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna mengisi field input nama pet, jenis, dan nama pemilik dengan angka. Maka, akan muncul dialog teks di atas. Pengguna diminta mengulang inputnya.</p>
+
+**2. Validasi input dan jika lebih dari jumlah karakter yang ditentukan**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0e9d08cc-c6d7-4a1b-90a5-4ec632b2fc40" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna mengisi field input nama pet dengan karakter lebih dari 30, jenis lebih dari 20, dan nama pemilik lebih dari 40 karakter. Maka, akan muncul dialog teks di atas. Pengguna diminta mengulang inputnya hingga validasi sukses.</p>
+
+**3. Validasi input dan jika umur lebih dari 2 digit atau berupa selain angka**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/3042bf6c-fc79-41ad-b6d0-3c27d1fee06a" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna menginput lebih dari 3 digit angka atau memasukkan huruf pada field input umur. Maka, akan muncul dialog teks seperti pada gambar di atas.</p>
+
+**4. Validasi input dan jika umur di luar rentang 0-30 tahun**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dcd1329d-d8ca-4a34-9b85-ef5ca8b74d51" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna memasukkan umur pet di bawah 0 atau lebih dari 30 tahun, maka akan diminta input ulang.</p>
+
+**5. Berhasil menambah data**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4805e553-e2fa-4d30-9019-6c85aad5afa3" alt="" width="500px">
+</div>
+
+<p align="justify">Pada gambar di atas merupakan tampilan apabila proses penambahan data pet berhasil.</p>
+
+</details>
+
+<details>
+<summary><h3>Melihat Data Pet</h3></summary>
+
+**1. Jika data pet pada ArrayList masih kosong**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/bf990e63-b24d-4c18-82a5-d06b7f12f08e" alt="" width="500px">
+</div>
+
+<p align="justify">Akan muncul teks seperti pada gambar di atas jika ArrayList masih kosong.</p>
+
+**2. Tampilan daftar pet jika memiliki data**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/dee21aad-ba92-4776-8112-85424dfece3e" alt="" width="500px">
+</div>
+
+</details>
+
+<details>
+<summary><h3>Memperbarui Data Pet</h3></summary>
+
+**1. Validasi ID dan jika gagal**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/64e5fc8c-6b99-430b-80b2-d836fca3e4ca" alt="" width="500px">
+</div>
+
+<p align="justify">Jika pengguna memasukkan id yang tidak ada atau tidak cocok dengan yang ada pada ArrayList. Maka, akan muncul teks seperti pada gambar.</p>
+
+**2. Tampilan pembaruan data pet jika berhasil**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/e7fa40c6-8ef8-467d-a361-3efef7c821ca" alt="" width="500px">
+</div>
+
+<p align="justify">Perlu diketahui, bahwa logika dan proses validasi input seperti batas karakter, rentang umur, dll. pada bagian update ini kurang lebih sama dengan yang ada pada proses penambahan data pet. Bedanya, hanya di cara penyimpanannya di ArrayList menggunakan variabel khusus untuk bagian update. Pada gambar di atas merupakan tampilan jika pembaruan data pet berhasil.</p>
+
+</details>
+
+<details>
+
+<summary><h3>Menghapus Data Pet</h3></summary>
+
+**1. Validasi ID dan jika gagal**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ae6042d6-9e36-43b4-aec3-7a0077e32df5" alt="" width="500px">
+</div>
+
+<p align="justify">Sama seperti di bagian update, pengguna diminta memasukkan ID pet, dan jika proses validasi gagal. Maka akan diminta input ulang.</p>
+
+**2. Jika data pet berhasil dihapus**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/2bfe34c2-344e-42b7-bf99-91809a0ea644" alt="" width="500px">
+</div>
+
+<p align="justify">Jika proses validasi berhasil (ID cocok dengan data dalam ArrayList). Maka, data berhasil dihapus.</p>
 
 </details>
 
